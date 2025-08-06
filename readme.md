@@ -15,15 +15,7 @@ This project implements a conversational SQL agent using **LangGraph** and **Str
 
 Check out the SQL agent in action:
 
-<p align="center">
-  <video
-    src="https://animesh1012.github.io/data_analyst_agent/demo.mp4"
-    controls
-    width="700"
-  >
-    Your browser does not support the video tag.
-  </video>
-</p>
+[▶️ Watch Demo](https://animesh1012.github.io/data_analyst_agent/demo.mp4)
 
 
 ## Features
