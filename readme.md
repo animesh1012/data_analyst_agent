@@ -16,7 +16,7 @@ This project implements a conversational SQL agent using **LangGraph** and **Str
 Check out the SQL agent in action:
 
 <video width="100%" controls>
-  <source src="demo.mp4" type="video/mp4">
+  <source src="./demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
