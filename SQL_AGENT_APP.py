@@ -46,9 +46,6 @@ def get_tools():
 
 
 
-## AGENT STATES
-
-
 ##Agentic Flow utils
 
 # Listing All tables
@@ -286,25 +283,19 @@ def run_and_stream(thinking_placeholder, response_placeholder, input_message, ch
 
 
 ##STREAMLIT UI STARTED
-
 def main():
 
     st.set_page_config(page_title="SQL AGENT",
                         layout="centered",
                         page_icon="🤖")
-
-    # --- App Title ---
     st.markdown("<h1 style='text-align: center;'>SQL AGENT</h1>", unsafe_allow_html=True)
     st.sidebar.markdown("<h4 style='text-align: left;'>Developed using LangGraph..</h4>", unsafe_allow_html=True)
 
-
-        ##Messages and Chat history
     if "messages" not in st.session_state:
                 st.session_state.messages=[]
-
     if "chat_history" not in st.session_state:
                 st.session_state.chat_history=[]
-
+        
     for message in st.session_state.messages:
                 with st.chat_message(message['role']):
                     st.markdown(message['content'])
@@ -319,22 +310,18 @@ def main():
     if st.sidebar.button("Clear Agent Memory"):
         st.session_state.chat_history=[]
     
-
     user_input = st.chat_input('Ask your query here')
     if user_input:
                 with st.chat_message('user'):
                     st.markdown(user_input)
                 st.session_state.messages.append({'role':'user', 'content':user_input})
-
+        
                 with st.chat_message('assistant'):
-
-                    # create two empty placeholders at the top of your Streamlit app
                     thinking_placeholder  = st.empty()
                     response_placeholder  = st.empty()
                     thinking_text, answer_text, sql_query = run_and_stream(thinking_placeholder, response_placeholder,
                                                                            user_input, st.session_state.chat_history,
                                                                            graph)
-
 
                 st.session_state.messages.append({'role':'assistant', 'content':answer_text})
                 st.sidebar.subheader("SQL QUERY")
