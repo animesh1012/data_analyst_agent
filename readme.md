@@ -37,7 +37,7 @@ Check out the SQL agent in action:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-org/sql-langgraph-agent.git
+   git clone https://github.com/animesh1012/data_analyst_agent.git
    cd sql-langgraph-agent
    ```
 2. Create a virtual environment and install dependencies:
